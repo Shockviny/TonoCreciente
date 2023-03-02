@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>TonoCreciente</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  
+</head>
+
+
+<body>
+  
+
+  <h1>TonoCreciente</h1>
+  <p>Ingrese una secuencia de notas separadas por comas (por ejemplo: C, D, E):</p>
+  <input type="text" id="secuenciaInput"><br>
+  <p>Semitonos:</p>
+  <button onclick="cambiarSemitono(-1)">-</button>
+  <span id="semiTonoOutput">1</span>
+  <button onclick="cambiarSemitono(1)">+</button>
+  <br><br>
+  <button onclick="subirTono()">Subir tono</button>
+  <button onclick="bajarTono()">Bajar tono</button>
+  <br><br>
+  <p>Resultado:</p>
+  <textarea id="resultadoOutput" rows="3"></textarea>
+  <br><br>
+  <button onclick="guardarSecuencia()">Guardar Secuencia</button>
+  <br><br>
+  <p>Secuencias guardadas:</p>
+  <select id="secuenciasGuardadasSelect">
+  </select>
+  <button onclick="crearOtraSecuencia()">Usar Secuencia</button>
+  <button onclick="eliminarSecuencia()">Eliminar Secuencia</button>
+
+</body>
+</html>

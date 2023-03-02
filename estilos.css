@@ -1,0 +1,109 @@
+body {
+  background: linear-gradient(to bottom right, #56ab2f, #2b8fbd, #9559a7);
+
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+  color: #333;
+}
+
+input[type=text], textarea, select {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  font-size: 25px;
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  /*background: linear-gradient(to right, #A7ECE6, #FFB6C1);*/
+  background: linear-gradient(to right, #ff0066, #ff6699);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+button:active {
+  transform: scale(0.70);
+}
+
+button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #fff;
+  opacity: 0.4;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+button:active:after {
+  width: 300px;
+  height: 300px;
+}
+
+
+@media screen and (min-width: 600px) {
+  input[type=text]:focus, textarea:focus, select:focus {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  input[type=text], textarea, select {
+    width: 50%;
+    max-width: 600px;
+  }
+  
+  button {
+    margin: 20px;
+  }
+}
